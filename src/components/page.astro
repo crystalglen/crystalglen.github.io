@@ -1,0 +1,41 @@
+---
+import Header from './header.astro';
+import Footer from './footer.astro';
+
+---
+<style>
+	body {
+		padding: 0;
+		margin: 0;
+	}
+  main {
+		background-color: powderblue;
+	}
+	.container {
+		max-width: 80%;
+		margin-inline: auto;
+		padding-inline: 20px;
+		background-color: cornsilk;
+	}
+</style>
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Crystal Glen | {Astro.props.title} </title>
+	</head>
+	<body>
+		<Header/>
+    <main>
+      <div class="container">
+      	<slot/>
+			</div>
+    </main>
+    <Footer/>
+	</body>
+</html>
